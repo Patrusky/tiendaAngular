@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'tiendaAngular';
+  imgParent = '../assets/img/bici1.jpg';
 }
