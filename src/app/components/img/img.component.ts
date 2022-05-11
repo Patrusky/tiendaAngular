@@ -3,18 +3,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-img',
   templateUrl: './img.component.html',
-  styleUrls: ['./img.component.sass']
+  styleUrls: ['./img.component.scss']
 })
 export class ImgComponent implements OnInit {
 
   @Input() img: string = '';
-  imgDefault = '../../../assets/img/placeholder-image.jpg'
-
   @Output() loaded = new EventEmitter<string>();
+  imgDefault = '../../../assets/img/placeholder-image.jpg'
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   imgError(){
