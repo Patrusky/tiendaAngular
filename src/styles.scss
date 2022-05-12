@@ -3,4 +3,13 @@
 @import url(./styles/reset.scss);
  *{
    font-family: 'Quicksand', sans-serif;
+
  }
+.products--grid {
+  app-img {
+    img {
+      border-radius:  10px;
+    }
+  }
+  margin: 50px;
+}

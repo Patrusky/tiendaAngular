@@ -3,20 +3,30 @@
   flex-direction: column;
 
 }
+.inf {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  place-content: end;
+  grid-template-rows: 2, 1fr 1fr;
+  margin-top: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
 
 //tablets
 @media screen and (min-width: 40em) and (max-width: 63.9em){
   .products--grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px
+    grid-gap: 15px;
+
   }
 }
 //web
 @media screen and (min-width: 64em) {
   .products--grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px
   }
 }

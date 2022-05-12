@@ -1,7 +1,10 @@
-<p>Mi carrito {{myShoppingCard.length}}</p>
-<p>Total: {{ total | currency: 'EUR'}} </p>
-<p>Fecha. {{ today | date }}</p>
-<p>Fecha. {{ today | timeAgo }}</p>
+<div class="inf">
+  <p class="item"><b>Mi carrito</b> {{myShoppingCard.length}}</p>
+  <p class="item">{{ today | date }}</p>
+  <p class="item"><b>Total: </b> {{ total | currency: 'EUR'}} </p>
+
+  <!-- <p class="item">Fecha. {{ today | timeAgo }}</p> -->
+</div>
 <div class="products--grid">
   <app-product
     [product]="product"

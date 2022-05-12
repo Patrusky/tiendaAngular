@@ -1,11 +1,23 @@
 <div class="card ">
   <app-img class="img"  [img]="product.image"></app-img>
   <div class="contenido">
-    <h2>{{ product.price }}€</h2>
-    <p>{{ product.title }}</p>
-    <p appHighlight>{{ product.description }}</p>
-    <button (click)="onAddToCart()">Agregar carrito</button>
-    <button (click)="deleteToCart()">Eliminar</button>
+    <h2>{{ product.price }} €</h2>
+    <div class="title">
+      <h4>{{ product.title }}</h4>
+    </div>
+    <div class="botones">
+      <button (click)="onAddToCart()">Agregar carrito</button>
+      <button (click)="deleteToCart()">Eliminar</button>
+      <button (click)="toggleDescription()" *ngIf="!activeDescription"> Ver más </button>
+      <button (click)="toggleDescription()" *ngIf="activeDescription"> Ver menos </button>
+      <div *ngIf="activeDescription">
+        <div class="description" >
+          <p appHighlight   >{{ product.description }}</p>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
 </div>

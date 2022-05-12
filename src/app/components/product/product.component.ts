@@ -9,6 +9,9 @@ import { Product } from '../../models/product.model';
 })
 export class ProductComponent implements OnInit {
 
+  activeDescription = false;
+
+
   @Input() product: Product = {
     id: 0,
     title: '',
@@ -31,4 +34,7 @@ export class ProductComponent implements OnInit {
     this.deleteProduct.emit(this.product);
   }
 
+  toggleDescription() {
+    this.activeDescription = !this.activeDescription;
+  }
 }
