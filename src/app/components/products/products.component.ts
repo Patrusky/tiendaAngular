@@ -36,6 +36,9 @@ export class ProductsComponent implements OnInit {
     this.total = this.storeService.getTotal();
 
   }
+   outOfShoppingCart(product: Product){
+    this.storeService.deleteProduct(product);
+  }
 
 }
 

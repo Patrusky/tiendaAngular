@@ -28,8 +28,8 @@ export class ProductComponent implements OnInit {
   }
   onAddToCart(){
     this.addedProduct.emit(this.product);
-
   }
+
   deleteToCart(){
     this.deleteProduct.emit(this.product);
   }

@@ -10,7 +10,7 @@ export class StoreService {
 
   private myShoppingCard: Product[] = [];
   private myCard = new BehaviorSubject<Product[]>([]);
-
+  private eliminado = 0;
   myCard$ = this.myCard.asObservable();
 
   constructor() { }
@@ -18,6 +18,22 @@ export class StoreService {
   addProduct(product: Product){
     this.myShoppingCard.push(product);
     this.myCard.next(this.myShoppingCard);
+    console.log('Añadido',this.myShoppingCard);
+  }
+
+  filtrado(product: Product){
+
+  }
+
+   deleteProduct(product: Product){
+    const eliminar = this.myShoppingCard.findIndex(p=> p.id === product.id);
+    console.log("ELIMINADO", eliminar);
+    if (eliminar >=  0){
+        this.myShoppingCard.splice(eliminar, 1);
+        console.log('eliminando')
+        }
+    this.myCard.next(this.myShoppingCard);
+    console.log('eliminado',this.myShoppingCard);
   }
 
   getShoppingCard() {
