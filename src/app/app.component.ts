@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   imgParent = '../assets/img/bici1.jpg';
   showImg = true;
-
+  category: string[]  = [];
 
 
   onLoaded(img: string){
@@ -17,5 +17,8 @@ export class AppComponent {
   }
   toggleImg(){
     this.showImg = !this.showImg;
+  }
+  getCategory(category: string[]){
+    this.category = category;
   }
 }

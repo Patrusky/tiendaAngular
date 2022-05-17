@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
+import { Product } from '../../models/product.model';
+
 
 @Component({
   selector: 'app-nav',
@@ -11,8 +13,11 @@ export class NavComponent implements OnInit {
   activeMenu = false;
   counter = 0;
 
+  @Output() filter = new EventEmitter<string[]>();
+
   constructor(
-    private storeService: StoreService
+    private storeService: StoreService,
+
   ) { }
 
   ngOnInit(): void {
@@ -23,5 +28,9 @@ export class NavComponent implements OnInit {
 
   toggleMenu() {
     this.activeMenu = !this.activeMenu;
+  }
+
+  enlace(category: string[]){
+    this.filter.emit(category)
   }
 }

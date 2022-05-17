@@ -13,9 +13,11 @@
   <div class="side-menu" [class.active]="activeMenu">
     <button (click)="toggleMenu()">Cerrar</button>
     <ul>
-      <li><a href="">All</a></li>
-      <li><a href="">Clothes</a></li>
-      <li><a href="">Electronics</a></li>
+      <li><a href="javascript:void()" (click)="enlace([])">All</a></li>
+      <li><a href="javascript:void()" (click)="enlace(['jewelery'])">Jewelery</a></li>
+      <li><a href="javascript:void()" (click)="enlace(['men\'s clothing'])">Men's Clothes</a></li>
+      <li><a href="javascript:void()" (click)="enlace(['men\'s clothing', 'women\'s clothing'])">Clothes</a></li>
+      <li><a href="javascript:void()" (click)="enlace(['electronics'])">Electronics</a></li>
     </ul>
   </div>
 </div>
@@ -26,9 +28,11 @@
         <img src="./assets/svg/logo_yard_sale.svg" alt="logo">
       </a>
       <ul>
-        <li><a href="">All</a></li>
-        <li><a href="">Clothes</a></li>
-        <li><a href="">Electronics</a></li>
+        <li><a href="javascript:void()" (click)="enlace([])">All</a></li>
+        <li><a href="javascript:void()" (click)="enlace(['jewelery'])">Jewelery</a></li>
+        <li><a href="javascript:void()" (click)="enlace(['men\'s clothing'])">Men's Clothes</a></li>
+        <li><a href="javascript:void()" (click)="enlace(['men\'s clothing', 'women\'s clothing'])">Clothes</a></li>
+        <li><a href="javascript:void()" (click)="enlace(['electronics'])">Electronics</a></li>
       </ul>
     </nav>
     <div class="info">

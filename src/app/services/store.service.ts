@@ -21,9 +21,7 @@ export class StoreService {
     console.log('Añadido',this.myShoppingCard);
   }
 
-  filtrado(product: Product){
 
-  }
 
    deleteProduct(product: Product){
     const eliminar = this.myShoppingCard.findIndex(p=> p.id === product.id);

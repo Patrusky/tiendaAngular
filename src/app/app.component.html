@@ -1,6 +1,6 @@
 <div class="container">
-<app-nav></app-nav>
-<app-products></app-products>
+<app-nav (filter)="getCategory($event)"></app-nav>
+<app-products [category]="category"></app-products>
 
 <!--  <hr>
   <button (click)="toggleImg()" >Toggle Img</button>

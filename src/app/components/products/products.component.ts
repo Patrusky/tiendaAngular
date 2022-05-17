@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { StoreService } from 'src/app/services/store.service';
 import { ProductsService } from 'src/app/services/products.service';
@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
   products: Product[] = [];
   today = new Date();
   date = new Date(2022, 5, 11);
+  @Input() category: string[] = [];
 
   constructor(
     private storeService: StoreService,
@@ -29,6 +30,7 @@ export class ProductsComponent implements OnInit {
     .subscribe(data => {
       this.products = data;
     });
+
   }
 
   onAddToShoppingCart(product: Product){
